@@ -2,11 +2,6 @@
 ## java ee demos
 
 ---
-=======
-## java-ee-demos
-
-
->>>>>>> origin/master
 
 - 主要平时自己写的一些demo
 
