@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 ## java ee demos
 
----
 
 - 主要平时自己写的一些demo
 
