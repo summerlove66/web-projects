@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hui.springboot.mapper.OrderMapper" >
+
+<resultMap type="UserOrder" id="OrderMap">
+<id column="order_id" property="orderId" />
+<result column="channel" property="channel" />
+<result column="order_data"  property="orderData"/>
+<result column="charge_time" property= "chargeTime" />
+<result column="money" property="money"/>
+<association property="user" column="user_id" select="com.hui.springboot.mapper.UserMapper.getUserById"/>
+</resultMap>
+
+
+<insert id="insertOrder" parameterType="UserOrder" >
+	INSERT INTO user_order (channel ,order_data ,charge_time,money,user_id) VALUES (#{channel} ,#{orderData} ,#{chargeTime} ,#{money} ,#{user.userId});
+	
+</insert>
+<select id="getAllOrders" resultMap="OrderMap">
+SELECT * FROM user_order;
+
+</select>
+
+<select id="getOrderByuserId" resultMap="OrderMap">
+SELECT * FROM user WHERE user_id =#{ user.userId };
+
+</select>
+
+</mapper>
