@@ -32,7 +32,7 @@
 	</servlet-mapping>
 	<filter>
 		<filter-name>encodingFilter</filter-name>
-		<filter-class>com.patrick.example.filter.EncodingFilter</filter-class>
+		<filter-class>com.patrick.example.process.EncodingFilter</filter-class>
 		<init-param>
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
