@@ -1,5 +1,5 @@
 
-## java ee demos
+## web demo projects
 
 
 - 主要平时自己写的一些demo
